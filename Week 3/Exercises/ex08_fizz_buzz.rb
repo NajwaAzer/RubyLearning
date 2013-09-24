@@ -1,11 +1,13 @@
-def fizzbuzz(stop, pairs)
-  for i in 1..stop
-    string_to_print = String.new
-    pairs.each do |divider, matching_string| 
-      string_to_print += matching_string if i % divider == 0
-    end
-    puts "#{i}: #{string_to_print.empty? ? i : string_to_print}"
+def fizzbuzz(number, rules={3 => 'Fizz', 5 => 'Buzz'})
+  result = String.new
+  rules.each do |divider, matching_string| 
+    result += matching_string if number % divider == 0
   end
+  result.empty? ? number : result
 end
 
-fizzbuzz(100, 3 => 'Fizz', 5 => 'Buzz', 7 => 'Dazz', 11 => 'Kezz')
+my_rules = {3 => 'Fizz', 5 => 'Buzz', 7 => 'Dazz', 11 => 'Kezz'} 
+
+(1..100).each do |i|
+  puts "#{i}: #{fizzbuzz(i, my_rules)}"
+end

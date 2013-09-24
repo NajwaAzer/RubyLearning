@@ -9,7 +9,7 @@ words_to_grandma = gets.chomp
 
 while words_to_grandma != 'BYE'
   case words_to_grandma
-  when words_to_grandma = words_to_grandma.upcase
+  when words_to_grandma == words_to_grandma.upcase
     puts "Grandma: NO, NOT SINCE #{years[rand(years.size)]}!"
   else
     puts "Grandma: HUH? SPEAK UP, SONNY!"
