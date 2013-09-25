@@ -18,6 +18,8 @@ class PlayfairCipher
   private
 
     def build_square(key)
+      # change J to I
+      phrase = phrase.gsub('J', 'I')
       # keep only letters
       letters = key.upcase.gsub(/[^A-Z]/, '').chars.uniq
 

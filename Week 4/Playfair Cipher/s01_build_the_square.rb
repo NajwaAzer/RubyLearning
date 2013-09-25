@@ -8,6 +8,8 @@
 
 def build_square(phrase)
   
+  # change J to I
+  phrase = phrase.gsub('J', 'I')
   # keep only letters
   phrase.upcase!.gsub!(/[^A-Z]/, '')
   letters = phrase.chars.uniq
@@ -31,3 +33,6 @@ puts my_cipher_square
 puts
 my_cipher_square_2 = build_square("I Love Ruby.")
 puts my_cipher_square_2
+
+puts
+puts build_square("Japan")
