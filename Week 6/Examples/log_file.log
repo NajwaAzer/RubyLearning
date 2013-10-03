@@ -1,0 +1,10 @@
+# Logfile created on 2013-10-03 04:15:47 +0000 by logger.rb/36483
+D, [2013-10-03T04:15:47.833718 #2494] DEBUG -- : Numerator: 10, denominator 2
+D, [2013-10-03T04:16:07.129248 #2522] DEBUG -- : Numerator: 10, denominator 2
+D, [2013-10-03T04:16:12.433316 #2522] DEBUG -- : Numerator: 100, denominator 20
+D, [2013-10-03T04:16:15.211286 #2522] DEBUG -- : Numerator: 0, denominator 0
+E, [2013-10-03T04:16:15.212013 #2522] ERROR -- : Error in division!: divided by 0
+D, [2013-10-03T04:16:17.955660 #2522] DEBUG -- : Numerator: 10, denominator 0
+E, [2013-10-03T04:16:17.956381 #2522] ERROR -- : Error in division!: divided by 0
+D, [2013-10-03T04:17:47.224273 #2522] DEBUG -- : Numerator: 10, denominator 0
+E, [2013-10-03T04:17:47.225097 #2522] ERROR -- : Error in division!: divided by 0
