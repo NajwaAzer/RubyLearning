@@ -1,48 +1,39 @@
 class Shape
+  attr_reader :shape, :extension, :rotation
+
+  def initialize
+    @shape = self.class.to_s.downcase
+    @extension = '.aif'
+    @rotation = "Rotating clockwise 360 degrees"
+  end
+
   def click
-    puts "You clicked on a #{self.class.to_s.downcase}"
-    rotate
-    play_sound
+    puts "You clicked on a #{shape}"
+    puts rotate
+    puts play_sound
   end
 
   def rotate
-    puts "Rotating clockwise 360 degrees"
+    rotation
   end
 
   def play_sound
-    puts "Playing the sound #{sound}"
+    "Playing the sound #{shape + " " + extension}"
   end
 end
 
-class Square < Shape
-  def sound
-    "square.aif"
-  end
-end
-
-class Circle < Shape
-  def sound
-    "circle.aif"
-  end
-end
-
-class Triangle < Shape
-  def sound
-    "triangle.aif"
-  end
-end
+class Square < Shape ; end
+class Circle < Shape ; end
+class Triangle < Shape ; end
 
 class Amoeba < Shape
-  def sound
-    "amoeba.hif"
-  end
-
-  def rotate
-    puts "Rotating around a point on one end"
+  def initialize
+    super
+    @extension = '.hif'
+    @rotation = 'Rotating around a point on one end'
   end
 end
 
-Square.new.click
-Circle.new.click
-Triangle.new.click
-Amoeba.new.click
+[Square.new, Circle.new, Triangle.new, Amoeba.new].each do |shape| 
+  shape.click
+end
